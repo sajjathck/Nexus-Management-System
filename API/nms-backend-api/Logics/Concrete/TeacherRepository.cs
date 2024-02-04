@@ -51,7 +51,7 @@ namespace nms_backend_api.Logics.Concrete
         
         public void Update(Teacher teacher)
         {
-           foreach(var s in teachers)
+          // foreach(var s in teachers)
             _context.SaveChanges();
         }
     }

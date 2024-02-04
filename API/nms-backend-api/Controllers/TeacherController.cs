@@ -11,7 +11,7 @@ namespace nms_backend_api.Controllers
     public class TeacherController : ControllerBase
     {
 
-        private readonly ITeacherRepository teacherRepository;
+        public readonly ITeacherRepository teacherRepository;
 
         public TeacherController(ITeacherRepository teacherRepository)
         {
@@ -31,7 +31,7 @@ namespace nms_backend_api.Controllers
             }
         }
         [HttpPost, Route("AddTeacher")]
-        public IActionResult Teacher(Teacher teacher)
+        public IActionResult AddTeacher(Teacher teacher)
         {
             try
             {
