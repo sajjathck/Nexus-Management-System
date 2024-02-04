@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Login from './Components/VIews/Login';
 import Nopage from './Components/VIews/Nopage';
-import Layout from './Components/Layout';
+import Layout from './Components/homeLayout';
 import Home from './Components/VIews/Home';
 import About from './Components/VIews/About';
 import Contact from './Components/VIews/Contact';

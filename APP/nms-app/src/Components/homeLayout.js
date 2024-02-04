@@ -1,11 +1,10 @@
 import React from 'react'
 import { Link, Outlet } from 'react-router-dom'
-import Login from './VIews/Login'
 import Button from './Button'
 
 export default function Layout() {
     return (
-        <div className='bg-dark'>
+        <div className=''>
             <nav className="navbar navbar-expand-lg navbar-light">
                 <div className="container">
                     <Link className="navbar-brand" to='/'>
@@ -30,8 +29,7 @@ export default function Layout() {
                     </div>
                 </div>
             </nav>
-
-            <main className='bg-dark'>
+            <main className='mx-2 mb-0'>
             <Outlet />
             </main>
             
