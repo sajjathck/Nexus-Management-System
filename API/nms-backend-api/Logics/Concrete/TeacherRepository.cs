@@ -28,6 +28,7 @@ namespace nms_backend_api.Logics.Concrete
         public List<Teacher> GetAll()
         {
            return _context.teachers.ToList();
+          
         }
 
         public Teacher GetTeacher(int id)
@@ -43,13 +44,15 @@ namespace nms_backend_api.Logics.Concrete
 
         public List<Teacher> GetTeachersBySubject(string subject)
         {
-            List<Teacher> teachersbysub=_context.teachers.Where((e)=>e.Equals(subject)).ToList();
+
+            List<Teacher> teachersbysub = _context.teachers.Where((e) => e.Equals(subject)).ToList();
             return teachersbysub;
         }
-
+        
         public void Update(Teacher teacher)
         {
-            
+           foreach(var s in teachers)
+            _context.SaveChanges();
         }
     }
 }
