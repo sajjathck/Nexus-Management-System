@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\project_Nms\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj": {}
+    "F:\\RM Training\\Project_nms\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj": {}
   },
   "projects": {
-    "C:\\project_Nms\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj": {
+    "F:\\RM Training\\Project_nms\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\project_Nms\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj",
+        "projectUniqueName": "F:\\RM Training\\Project_nms\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj",
         "projectName": "nms-backend-api",
-        "projectPath": "C:\\project_Nms\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj",
-        "packagesPath": "C:\\Users\\bkalaric\\.nuget\\packages\\",
-        "outputPath": "C:\\project_Nms\\Nexus-Management-System\\API\\nms-backend-api\\obj\\",
+        "projectPath": "F:\\RM Training\\Project_nms\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj",
+        "packagesPath": "C:\\Users\\Bince\\.nuget\\packages\\",
+        "outputPath": "F:\\RM Training\\Project_nms\\Nexus-Management-System\\API\\nms-backend-api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\bkalaric\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Bince\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,16 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
@@ -64,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

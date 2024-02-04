@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "PMcdPBMl9F4pb8WNlnMoAM5ZsrhjAu6njLdniGg60Ts=",
+  "Source": "nms-backend-api",
+  "BasePath": "_content/nms-backend-api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
