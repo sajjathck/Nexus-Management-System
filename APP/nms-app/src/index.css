@@ -67,7 +67,7 @@ body, html, .App, #root, .auth-wrapper {
 .custom-control-label {
   font-weight: 400;
 }
-.forgot-password,
+.forgot-password,.show-pw
 .forgot-password a {
   text-align: right;
   font-size: 13px;
@@ -79,9 +79,7 @@ body, html, .App, #root, .auth-wrapper {
   color: #167bff;
   text-decoration: none;
 }
-.card {
-  /* --bs-card-inner-border-radius: 0 !important; */
-}
+
 .btn-login{
 background-color: #2d75f1 !important;
 color: #f1f3f8 !important;
