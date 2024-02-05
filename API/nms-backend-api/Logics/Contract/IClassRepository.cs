@@ -7,7 +7,9 @@ namespace nms_backend_api.Logics.Contract
         void Create(Class1 clas );
         void Update(Class1 clas);
         void Delete(int id);
-        Class1 GetClass(int id);
+        Class1 GetClassById(int id);
+        Class1 GetClassByTeacher(int teacherid);
+
         List<Class1> GetAll();
        
     }

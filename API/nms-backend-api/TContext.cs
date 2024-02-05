@@ -10,6 +10,7 @@ namespace nms_backend_api
             Configuration = configuration;
         }
         public DbSet<Teacher> teachers { get; set; }
+        public DbSet<Class1> class1 { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(Configuration.GetConnectionString("MyConnection"));
