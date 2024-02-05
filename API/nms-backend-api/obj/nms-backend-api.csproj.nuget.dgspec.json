@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rsekhar\\Iprime_3\\WEB\\Project\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj": {}
+    "C:\\project_Nms\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rsekhar\\Iprime_3\\WEB\\Project\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj": {
+    "C:\\project_Nms\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rsekhar\\Iprime_3\\WEB\\Project\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj",
+        "projectUniqueName": "C:\\project_Nms\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj",
         "projectName": "nms-backend-api",
-        "projectPath": "C:\\Users\\rsekhar\\Iprime_3\\WEB\\Project\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj",
-        "packagesPath": "C:\\Users\\rsekhar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rsekhar\\Iprime_3\\WEB\\Project\\Nexus-Management-System\\API\\nms-backend-api\\obj\\",
+        "projectPath": "C:\\project_Nms\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj",
+        "packagesPath": "C:\\Users\\bkalaric\\.nuget\\packages\\",
+        "outputPath": "C:\\project_Nms\\Nexus-Management-System\\API\\nms-backend-api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\rsekhar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\bkalaric\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
