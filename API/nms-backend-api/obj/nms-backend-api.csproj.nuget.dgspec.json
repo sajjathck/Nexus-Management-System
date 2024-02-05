@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< Updated upstream
     "C:\\abiya1\\project\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj": {}
   },
   "projects": {
@@ -12,9 +13,30 @@
         "projectPath": "C:\\abiya1\\project\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj",
         "packagesPath": "C:\\Users\\aelsavar\\.nuget\\packages\\",
         "outputPath": "C:\\abiya1\\project\\Nexus-Management-System\\API\\nms-backend-api\\obj\\",
+=======
+    "C:\\Users\\ugkee\\OneDrive\\Documents\\Iprime_git\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\ugkee\\OneDrive\\Documents\\Iprime_git\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ugkee\\OneDrive\\Documents\\Iprime_git\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj",
+        "projectName": "nms-backend-api",
+        "projectPath": "C:\\Users\\ugkee\\OneDrive\\Documents\\Iprime_git\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj",
+        "packagesPath": "C:\\Users\\ugkee\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ugkee\\OneDrive\\Documents\\Iprime_git\\Nexus-Management-System\\API\\nms-backend-api\\obj\\",
+>>>>>>> Stashed changes
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
+<<<<<<< Updated upstream
           "C:\\Users\\aelsavar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\ugkee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+>>>>>>> Stashed changes
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -74,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
