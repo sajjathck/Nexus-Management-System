@@ -3,17 +3,20 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using nms_backend_api;
+using nms_backend_api.Entity;
 
 #nullable disable
 
 namespace nms_backend_api.Migrations
 {
-    [DbContext(typeof(TContext))]
-    partial class TContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(MyContext))]
+    [Migration("20240205103959_mig2")]
+    partial class mig2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,6 +24,38 @@ namespace nms_backend_api.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("nms_backend_api.Entity.Student", b =>
+                {
+                    b.Property<int>("StudentId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("StudentId"));
+
+                    b.Property<DateTime>("DOB")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("varchar")
+                        .HasColumnName("FirstName");
+
+                    b.Property<string>("Gender")
+                        .IsRequired()
+                        .HasColumnType("char");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("varchar")
+                        .HasColumnName("LastName");
+
+                    b.HasKey("StudentId");
+
+                    b.ToTable("tbl_student");
+                });
 
             modelBuilder.Entity("nms_backend_api.Entity.Teacher", b =>
                 {
@@ -32,7 +67,6 @@ namespace nms_backend_api.Migrations
 
                     b.Property<string>("Class")
                         .IsRequired()
-                        .HasMaxLength(30)
                         .HasColumnType("varchar")
                         .HasColumnName("Class");
 
@@ -41,6 +75,7 @@ namespace nms_backend_api.Migrations
 
                     b.Property<string>("FName")
                         .IsRequired()
+                        .HasMaxLength(30)
                         .HasColumnType("varchar")
                         .HasColumnName("FirstName");
 
@@ -51,6 +86,7 @@ namespace nms_backend_api.Migrations
 
                     b.Property<string>("LName")
                         .IsRequired()
+                        .HasMaxLength(30)
                         .HasColumnType("varchar")
                         .HasColumnName("LastName");
 
