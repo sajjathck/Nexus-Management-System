@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\msajjadc\\RM-Sajjad-Files\\Nexus-Management-System1\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj": {}
+    "C:\\abiya1\\project\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\msajjadc\\RM-Sajjad-Files\\Nexus-Management-System1\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj": {
+    "C:\\abiya1\\project\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\msajjadc\\RM-Sajjad-Files\\Nexus-Management-System1\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj",
+        "projectUniqueName": "C:\\abiya1\\project\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj",
         "projectName": "nms-backend-api",
-        "projectPath": "C:\\Users\\msajjadc\\RM-Sajjad-Files\\Nexus-Management-System1\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj",
-        "packagesPath": "C:\\Users\\msajjadc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\msajjadc\\RM-Sajjad-Files\\Nexus-Management-System1\\Nexus-Management-System\\API\\nms-backend-api\\obj\\",
+        "projectPath": "C:\\abiya1\\project\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj",
+        "packagesPath": "C:\\Users\\aelsavar\\.nuget\\packages\\",
+        "outputPath": "C:\\abiya1\\project\\Nexus-Management-System\\API\\nms-backend-api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\msajjadc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\aelsavar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

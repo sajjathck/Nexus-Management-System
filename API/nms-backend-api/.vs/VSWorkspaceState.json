@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Controllers",
+    "\\Entity",
+    "\\Logics",
+    "\\Logics\\Concrete",
+    "\\Logics\\Contract",
+    "\\Migrations"
+  ],
+  "SelectedNode": "\\Logics\\Concrete",
+  "PreviewInSolutionExplorer": false
+}
