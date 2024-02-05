@@ -5,7 +5,7 @@ namespace nms_backend_api.Logics.Concrete
 {
     public class ClassRepository : IClassRepository
     {
-        public void Create(Class clas)
+        public void Create(Class1 clas)
         {
             try
             {
@@ -31,7 +31,7 @@ namespace nms_backend_api.Logics.Concrete
             }
         }
 
-        public List<Class> GetAll()
+        public List<Class1> GetAll()
         {
             try
             {
@@ -44,7 +44,7 @@ namespace nms_backend_api.Logics.Concrete
             }
         }
 
-        public Class GetClass(int id)
+        public Class1 GetClass(int id)
         {
             try
             {
@@ -57,7 +57,7 @@ namespace nms_backend_api.Logics.Concrete
             }
         }
 
-        public void Update(Class clas)
+        public void Update(Class1 clas)
         {
             try
             {

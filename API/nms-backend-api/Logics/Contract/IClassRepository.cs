@@ -4,11 +4,11 @@ namespace nms_backend_api.Logics.Contract
 {
     public interface IClassRepository
     {
-        void Create(Class clas );
-        void Update(Class clas);
+        void Create(Class1 clas );
+        void Update(Class1 clas);
         void Delete(int id);
-        Class GetClass(int id);
-        List<Class> GetAll();
+        Class1 GetClass(int id);
+        List<Class1> GetAll();
        
     }
 }
