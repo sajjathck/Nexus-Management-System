@@ -11,12 +11,13 @@ import Login from "./Components/VIews/LandingPage/Login";
 import Nopage from "./Components/VIews/Nopage";
 import Dashboard from "./Components/VIews/Dashboard/Dashboard";
 import DashboardLayout from "./Components/Layouts/DashboardLayout";
-import ProfilePage from "./Components/VIews/Dashboard/StudentComponents.js/ProfilePage";
-import AttendancePage from "./Components/VIews/Dashboard/StudentComponents.js/AttendancePage";
-import ExaminationPage from "./Components/VIews/Dashboard/StudentComponents.js/ExaminationPage";
-import ClassPage from "./Components/VIews/Dashboard/StudentComponents.js/ClassPage";
-import CommunicationPage from "./Components/VIews/Dashboard/StudentComponents.js/CommunicationPage";
+import ProfilePage from "./Components/VIews/Dashboard/StudentComponents/ProfilePage";
+import AttendancePage from "./Components/VIews/Dashboard/StudentComponents/AttendancePage";
+import ExaminationPage from "./Components/VIews/Dashboard/StudentComponents/ExaminationPage";
+import ClassPage from "./Components/VIews/Dashboard/StudentComponents/ClassPage";
+import CommunicationPage from "./Components/VIews/Dashboard/StudentComponents/CommunicationPage";
 import StudentPage from "./Components/VIews/Dashboard/StudentPage";
+import TeacherPage from "./Components/VIews/Dashboard/TeacherPage";
 
 function App() {
   return (
@@ -32,7 +33,14 @@ function App() {
           </Route>
           <Route path="/dashboard" element={<DashboardLayout />}>
             <Route index element={<Dashboard />} />
-            <Route pathe="student" element={<StudentPage />}>
+            <Route path="student" element={<StudentPage />}>
+              <Route path="profile" element={<ProfilePage />} />
+              <Route path="attendance" element={<AttendancePage />} />
+              <Route path="examination" element={<ExaminationPage />} />
+              <Route path="class" element={<ClassPage />} />
+              <Route path="communication" element={<CommunicationPage />} />
+            </Route>
+            <Route path="teacher" element={<TeacherPage />}>
               <Route path="profile" element={<ProfilePage />} />
               <Route path="attendance" element={<AttendancePage />} />
               <Route path="examination" element={<ExaminationPage />} />

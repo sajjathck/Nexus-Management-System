@@ -1,10 +1,11 @@
 import React from "react";
 import Button from "../Button";
 import { Link, Outlet } from "react-router-dom";
+import Sidebar from "../VIews/Dashboard/Shared/Sidebar";
 
 export default function DashboardLayout() {
   return (
-    <div className="">
+    <div className="container-fluid">
       <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container">
           <Link className="navbar-brand" to="/">
@@ -18,9 +19,15 @@ export default function DashboardLayout() {
           </div>
         </div>
       </nav>
-      <main className="mx-2 mb-0">
-        <Outlet />
-      </main>
+      <div className="row mx-2 mb-0 mt-2 rounded-3 bg-light ">
+        <Sidebar />
+        <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+          <div className="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">Teacher Dashboard</h1>
+          </div>
+          <Outlet />
+        </main>
+      </div>
     </div>
   );
 }
