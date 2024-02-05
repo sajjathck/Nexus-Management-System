@@ -1,13 +1,13 @@
 import React from 'react'
 
-export default function Button() {
+export default function Button(props) {
   return (
     <div>
         <button
             type="button"
-            class="btn btn-login"
+            className="btn btn-login"
         >
-            Login
+            {props.text}
         </button>
         
     </div>
