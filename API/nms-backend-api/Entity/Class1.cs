@@ -5,7 +5,7 @@ namespace nms_backend_api.Entity
 {
     [Table("tbl_class")]
 
-    public class Class
+    public class Class1
     {
        
             [Key]
