@@ -1,7 +1,11 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< Updated upstream
     "F:\\RM Training\\Project_nms\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj": {}
+=======
+    "C:\\Users\\kuthaman\\Desktop\\Project\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj": {}
+>>>>>>> Stashed changes
   },
   "projects": {
     "F:\\RM Training\\Project_nms\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj": {
@@ -14,7 +18,11 @@
         "outputPath": "F:\\RM Training\\Project_nms\\Nexus-Management-System\\API\\nms-backend-api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
+<<<<<<< Updated upstream
           "C:\\Users\\Bince\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\kuthaman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> Stashed changes
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
