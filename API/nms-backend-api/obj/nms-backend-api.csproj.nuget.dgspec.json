@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\project_Nms\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj": {}
+    "C:\\Users\\kuthaman\\Desktop\\Project\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj": {}
   },
   "projects": {
-    "C:\\project_Nms\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj": {
+    "C:\\Users\\kuthaman\\Desktop\\Project\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\project_Nms\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj",
+        "projectUniqueName": "C:\\Users\\kuthaman\\Desktop\\Project\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj",
         "projectName": "nms-backend-api",
-        "projectPath": "C:\\project_Nms\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj",
-        "packagesPath": "C:\\Users\\bkalaric\\.nuget\\packages\\",
-        "outputPath": "C:\\project_Nms\\Nexus-Management-System\\API\\nms-backend-api\\obj\\",
+        "projectPath": "C:\\Users\\kuthaman\\Desktop\\Project\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj",
+        "packagesPath": "C:\\Users\\kuthaman\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kuthaman\\Desktop\\Project\\Nexus-Management-System\\API\\nms-backend-api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\bkalaric\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kuthaman\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

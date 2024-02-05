@@ -15,6 +15,7 @@ namespace nms_backend_api
             builder.Services.AddDbContext<MyContext>();
             builder.Services.AddTransient<IStudentRepository, StudentRepository>();
             builder.Services.AddTransient<ITeacherRepository, TeacherRepository>();
+            builder.Services.AddTransient<IExaminationRepository, ExaminationRepository>();
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
