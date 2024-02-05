@@ -4432,31 +4432,19 @@
     ]
   },
   "packageFolders": {
-<<<<<<< Updated upstream
-    "C:\\Users\\Bince\\.nuget\\packages\\": {}
-=======
     "C:\\Users\\kuthaman\\.nuget\\packages\\": {}
->>>>>>> Stashed changes
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< Updated upstream
-      "projectUniqueName": "F:\\RM Training\\Project_nms\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj",
-=======
       "projectUniqueName": "C:\\Users\\kuthaman\\Desktop\\Project\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj",
->>>>>>> Stashed changes
       "projectName": "nms-backend-api",
-      "projectPath": "F:\\RM Training\\Project_nms\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj",
-      "packagesPath": "C:\\Users\\Bince\\.nuget\\packages\\",
-      "outputPath": "F:\\RM Training\\Project_nms\\Nexus-Management-System\\API\\nms-backend-api\\obj\\",
+      "projectPath": "C:\\Users\\kuthaman\\Desktop\\Project\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj",
+      "packagesPath": "C:\\Users\\kuthaman\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kuthaman\\Desktop\\Project\\Nexus-Management-System\\API\\nms-backend-api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-<<<<<<< Updated upstream
-        "C:\\Users\\Bince\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
         "C:\\Users\\kuthaman\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> Stashed changes
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4516,7 +4504,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   },

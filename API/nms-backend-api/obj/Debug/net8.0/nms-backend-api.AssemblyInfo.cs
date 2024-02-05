@@ -14,11 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("nms-backend-api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< Updated upstream
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c6591a47f7a85dd1259ce70c693797b344e8a56")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d8cbe63fa8387bd59c8a6389bd5817a8472af7fa")]
->>>>>>> Stashed changes
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b59aa961a4d6015ad15ea0b2a253e892c907f562")]
 [assembly: System.Reflection.AssemblyProductAttribute("nms-backend-api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("nms-backend-api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

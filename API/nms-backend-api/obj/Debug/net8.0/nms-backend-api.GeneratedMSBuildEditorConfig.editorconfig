@@ -9,19 +9,11 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = nms_backend_api
 build_property.RootNamespace = nms_backend_api
-<<<<<<< Updated upstream
-build_property.ProjectDir = C:\abiya1\project\Nexus-Management-System\API\nms-backend-api\
-=======
 build_property.ProjectDir = C:\Users\kuthaman\Desktop\Project\Nexus-Management-System\API\nms-backend-api\
->>>>>>> Stashed changes
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-<<<<<<< Updated upstream
-build_property.MSBuildProjectDirectory = C:\abiya1\project\Nexus-Management-System\API\nms-backend-api
-=======
 build_property.MSBuildProjectDirectory = C:\Users\kuthaman\Desktop\Project\Nexus-Management-System\API\nms-backend-api
->>>>>>> Stashed changes
 build_property._RazorSourceGeneratorDebug = 
