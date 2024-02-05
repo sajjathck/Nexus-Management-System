@@ -4432,19 +4432,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kuthaman\\.nuget\\packages\\": {}
+    "C:\\Users\\aelsavar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kuthaman\\Desktop\\Project\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj",
+      "projectUniqueName": "C:\\abiya1\\project\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj",
       "projectName": "nms-backend-api",
-      "projectPath": "C:\\Users\\kuthaman\\Desktop\\Project\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj",
-      "packagesPath": "C:\\Users\\kuthaman\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kuthaman\\Desktop\\Project\\Nexus-Management-System\\API\\nms-backend-api\\obj\\",
+      "projectPath": "C:\\abiya1\\project\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj",
+      "packagesPath": "C:\\Users\\aelsavar\\.nuget\\packages\\",
+      "outputPath": "C:\\abiya1\\project\\Nexus-Management-System\\API\\nms-backend-api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\kuthaman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\aelsavar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4507,13 +4507,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\kuthaman\\Desktop\\Project\\Nexus-Management-System\\API\\nms-backend-api\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

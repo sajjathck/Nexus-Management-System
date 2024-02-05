@@ -2,11 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\Controllers",
+    "\\Entity",
     "\\Logics",
     "\\Logics\\Concrete",
     "\\Logics\\Contract",
     "\\Migrations"
   ],
-  "SelectedNode": "\\Logics\\Contract\\ITeacherRepository.cs",
+  "SelectedNode": "\\Logics\\Concrete",
   "PreviewInSolutionExplorer": false
 }
