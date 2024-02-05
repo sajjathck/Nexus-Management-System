@@ -86,12 +86,13 @@ namespace nms_backend_api.Controllers
                 throw;
             }
         }
-        [HttpGet, Route("GetAllTeacherBySubject/{Subject}")]
+        [HttpGet, Route("GetTeacherBySubject/{Subject}")]
         public IActionResult GetAllBySubject(string subject)
         {
             try
             {
-                return Ok(teacherRepository.GetTeachersBySubject(subject));
+                var teacher1 = teacherRepository.GetTeachersBySubject(subject);
+                return Ok(teacher1);
             }
             catch (Exception)
             {
@@ -100,11 +101,12 @@ namespace nms_backend_api.Controllers
             }
         }
         [HttpGet, Route("GetAllTeacherByClass/{Class}")]
-        public IActionResult GetAllTeacherByclass(string class1)
+        public IActionResult GetAllByclass(string class1)
         {
             try
             {
-                return Ok(teacherRepository.GetTeachersByClass(class1));
+                var teachr=(teacherRepository.GetTeachersByClass(class1));
+                return Ok(teachr);
             }
             catch (Exception)
             {

@@ -11,10 +11,12 @@ namespace nms_backend_api.Entity
 
         [Required] //set not null constraint
         [Column("FirstName", TypeName = "varchar")]
+        [StringLength(30)]
         public string FName { get; set; }
 
         [Required] //set not null constraint
         [Column("LastName", TypeName = "varchar")]
+        [StringLength(30)]
         public string LName { get; set; }
         [Required] //set not null constraint
         [Column("Class", TypeName = "varchar")]

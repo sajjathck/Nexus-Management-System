@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("nms-backend-api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+89844c4087cdcb1b5a9d381cadadeee5fe5305b1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+92230cd2c0f88f917506dcf3d408bc3e007aa755")]
 [assembly: System.Reflection.AssemblyProductAttribute("nms-backend-api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("nms-backend-api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -38,20 +38,20 @@ namespace nms_backend_api.Logics.Concrete
 
         public List<Teacher> GetTeachersByClass(string class1)
         {
-            List<Teacher> teachersByclass = _context.teachers.Where((e) => e.Equals(class1)).ToList();
+            List<Teacher> teachersByclass = _context.teachers.Where((e) => e.Class==class1).ToList();
             return teachersByclass;
         }
 
         public List<Teacher> GetTeachersBySubject(string subject)
         {
 
-            List<Teacher> teachersbysub = _context.teachers.Where((e) => e.Equals(subject)).ToList();
+            List<Teacher> teachersbysub = _context.teachers.Where((e) => e.Subject==subject).ToList();
             return teachersbysub;
         }
         
         public void Update(Teacher teacher)
         {
-          // foreach(var s in teachers)
+            _context.Update(teacher);
             _context.SaveChanges();
         }
     }
