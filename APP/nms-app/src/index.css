@@ -20,11 +20,9 @@ body, html, .App, #root, .auth-wrapper {
 }
 .navbar-brand{
   font-weight: 700;
-  padding:18px 0 0 0 !important;
 }
 .navbar-light {
   background-color: #ffffff;
-  
 }
 .nav-item {
   padding-bottom: 0px;

@@ -1,57 +1,51 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import axios from "axios";
 
 const validateInput = (value, label) => {
   if (value.trim() === "") {
     return `Please enter a ${label}.`;
   }
   if (label === "Password" && value.length < 8) {
-    return "Password must be at least 8 characters long.";
+    return "Password must be at least  8 characters long.";
   }
   return null;
 };
 
-export default function Login(props) {
+export default function Signup(props) {
   const [uname, setUname] = useState("");
   const [password, setPassword] = useState("");
+  const [role, setRole] = useState("");
   const [unameError, setUnameError] = useState("");
   const [passwordError, setPasswordError] = useState("");
+  const [roleError, setRoleError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
-  const handleLogin = async (e) => {
+  const handleSignup = async (e) => {
     e.preventDefault();
-    // btn fn
     setUnameError(validateInput(uname, "Username"));
     setPasswordError(validateInput(password, "Password"));
-    // let logins=[{ uname, password }]
+    setRoleError(validateInput(role, "Role"));
 
-    if (!unameError && !passwordError) {
+    if (!unameError && !passwordError && !roleError) {
       setIsLoading(true);
 
       try {
-        // Simulate API call
-        // const response = await new Promise((resolve) =>
-        //   setTimeout(() => resolve({ success: true }), 2000)
-        // );
-        const response = await axios.post(
-          "http://localhost:5225/api/User/Validate",
-          { uname, password }
+        // Replace with actual API call to register the user
+        const response = await new Promise((resolve) =>
+          setTimeout(() => resolve({ success: true }), 2000)
         );
 
         if (response.success) {
-          // Store authentication token or handle login state
+          // Redirect to dashboard or login page after successful signup
           navigate("/dashboard");
         } else {
-          // Handle failed login attempt (e.g., invalid credentials)
-          setUnameError("Invalid username or password.");
-          setPasswordError(null); // Clear password error on invalid credentials
+          // Handle failed signup attempt
+          setUnameError("Signup failed. Please try again.");
         }
       } catch (error) {
-        console.error("Error during login:", error);
-        // Handle API error gracefully
+        console.error("Error during signup:", error);
         setPasswordError("An error occurred. Please try again later.");
       } finally {
         setIsLoading(false);
@@ -61,16 +55,17 @@ export default function Login(props) {
 
   return (
     <section
-      id="login-section"
+      id="signup-section"
       className="bg-light rounded-2 p-3 p-md-4 p-xl-5 min-vh-80 d-flex flex-row align-items-center"
     >
       <div className="container">
         <div className="row justify-content-center">
           <div className="card rounded shadow p-0 mb-3">
-            <div className="row  g-0">
+            <div className="row g-0">
               <div className="col-md-8">
+                {/* Replace with actual image or remove if not needed */}
                 <img
-                  src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  src="https://images.unsplash.com/photo-1525011268546-bf3f9b007f6a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   className="card-img img-fluid"
                   alt="..."
                 />
@@ -79,11 +74,10 @@ export default function Login(props) {
                 <div className="card-body">
                   <div className="card-body p-3 p-md-4 p-xl-5">
                     <div className="row">
-                      <form onSubmit={handleLogin}>
+                      <form onSubmit={handleSignup}>
                         <h6 className="text-center mb-4 mt-0">
-                          Hey,Welcome Back.!
+                          Welcome! Sign up now.
                         </h6>
-                        <h3>Sign In</h3>
                         <div className="mb-3">
                           <label htmlFor="username">Username</label>
                           <input
@@ -101,7 +95,7 @@ export default function Login(props) {
                             </small>
                           )}
                         </div>
-                        <div className="mb-2">
+                        <div className="mb-3">
                           <label htmlFor="password">Password</label>
                           <div className="input-group">
                             <input
@@ -113,15 +107,14 @@ export default function Login(props) {
                               aria-describedby="passwordHelp"
                               aria-invalid={!!passwordError}
                             />
-                            {/* Some browsers Automatically have this option so i comment it\/ */}
-                            {/* <button
+                            {/* Show/hide password button */}
+                            <button
                               type="button"
                               className="input-group-text"
                               onClick={() => setShowPassword((prev) => !prev)}
-                              
                             >
                               {showPassword ? "Hide" : "Show"}
-                            </button> */}
+                            </button>
                           </div>
                           {passwordError && (
                             <small id="passwordHelp" className="text-danger">
@@ -129,20 +122,26 @@ export default function Login(props) {
                             </small>
                           )}
                         </div>
-                        <div className="mb-3 d-flex justify-content-between">
-                          {/* <div className="custom-control custom-checkbox">
-            <input
-              type="checkbox"
-              className="custom-control-input"
-              id="customCheck1"
-            />
-            <label className="custom-control-label" htmlFor="customCheck1">
-              Remember me
-            </label>
-          </div> */}
-                          <p className="forgot-password text-right p-0 text-decoration-none">
-                            Forgot <a href="#">Password?</a>
-                          </p>
+                        <div className="mb-3">
+                          <label htmlFor="role">Role</label>
+                          <select
+                            id="role"
+                            value={role}
+                            onChange={(e) => setRole(e.target.value)}
+                            className="form-control"
+                            aria-describedby="roleHelp"
+                            aria-invalid={!!roleError}
+                          >
+                            <option value="">Select Role</option>
+                            <option value="admin">Admin</option>
+                            <option value="teacher">Teacher</option>
+                            <option value="student">Student</option>
+                          </select>
+                          {roleError && (
+                            <small id="roleHelp" className="text-danger">
+                              {roleError}
+                            </small>
+                          )}
                         </div>
                         <div className="d-grid">
                           <button
@@ -150,12 +149,12 @@ export default function Login(props) {
                             className="btn btn-login"
                             disabled={isLoading}
                           >
-                            {isLoading ? "Logging in..." : "Submit"}
+                            {isLoading ? "Signing up..." : "Submit"}
                           </button>
                         </div>
-                        <div className="mb-3 mt-1 d-flex justify-content-between">
-                        <Link to="/signup" className="text-decoration-none">
-                          <small>Don't have an account? Sign Up</small>
+                        <div className="mb-3 d-flex justify-content-between">
+                        <Link to="/login" className="text-decoration-none">
+                          Already have an account? Log In
                         </Link>
                         </div>
                       </form>

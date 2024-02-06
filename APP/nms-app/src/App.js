@@ -18,6 +18,7 @@ import ClassPage from "./Components/VIews/Dashboard/StudentComponents/ClassPage"
 import CommunicationPage from "./Components/VIews/Dashboard/StudentComponents/CommunicationPage";
 import StudentPage from "./Components/VIews/Dashboard/StudentPage";
 import TeacherPage from "./Components/VIews/Dashboard/TeacherPage";
+import Signup from "./Components/VIews/Signup";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <Route path="contact" element={<Contact />} />
             <Route path="courses" element={<Courses />} />
             <Route path="login" element={<Login />} />
+            <Route path="signup" element={<Signup />} />
           </Route>
           <Route path="/dashboard" element={<DashboardLayout />}>
             <Route index element={<Dashboard />} />

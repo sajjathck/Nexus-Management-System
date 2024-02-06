@@ -9,10 +9,11 @@ export default function Layout() {
     <div className="">
       <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container">
+          
+          <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
           <Link className="navbar-brand" to="/">
             NeXus.
           </Link>
-          <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav m-auto">
               <li className="nav-item">
                 <Link className="nav-link .nav-link-hm" to="/">
