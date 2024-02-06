@@ -11,7 +11,10 @@ namespace nms_backend_api
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            builder.Services.AddDbContext<TContext>();
+      
+            builder.Services.AddDbContext<MyContext>();
+
+            builder.Services.AddTransient<ITeacherAttendenceRepository, TeacherAttendenceRepository>();
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();

@@ -12,8 +12,9 @@ namespace nms_backend_api.Entity
             public DbSet<Teacher> teachers { get; set; }
             public DbSet<Student> students { get; set; }
             public DbSet<StudentAttendence> StudAttendences { get; set; }
+            public DbSet<TeacherAttendence> TeachAttendences { get; set; }
 
-            protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             {
                 optionsBuilder.UseSqlServer(Configuration.GetConnectionString("MyConnection"));
             }

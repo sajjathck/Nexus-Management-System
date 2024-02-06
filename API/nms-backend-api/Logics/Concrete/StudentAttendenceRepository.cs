@@ -1,5 +1,7 @@
-﻿using nms_backend_api.Entity;
+﻿using Microsoft.EntityFrameworkCore;
+using nms_backend_api.Entity;
 using nms_backend_api.Logics.Contract;
+using static System.Reflection.Metadata.BlobBuilder;
 
 namespace nms_backend_api.Logics.Concrete
 {
@@ -45,24 +47,23 @@ namespace nms_backend_api.Logics.Concrete
         }
 
         //get attendence by id
-        public StudentAttendence GetStudAttendenceById(int studid)
+        public StudentAttendence GetStudAttendenceById(int studentId)
         {
             try
             {
-                return _context.StudAttendences.Find(studid);
+                return _context.StudAttendences.Find(studentId);
             }
             catch (Exception)
             {
 
                 throw;
             }
-
-            //get attendence by name
         }
+        //get attendence by name
 
-            //update 
-            public void Update(StudentAttendence studattendance)
-            {
+        //update 
+        public void Update(StudentAttendence studattendance)
+        {
             try
             {
                 _context.Update(studattendance);
@@ -91,6 +92,21 @@ namespace nms_backend_api.Logics.Concrete
             }
            }
 
+        public List<StudentAttendence> GetStudentAttendencebyDate(int date)
+        {
+
+            try
+            {
+                var studattendences = _context.StudAttendences.Where(
+                       x => x.AttendanceDate.Date.Equals( date)).ToList();
+                return studattendences;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
         }
-       
     }
+ }

@@ -6,9 +6,9 @@ namespace nms_backend_api.Logics.Concrete
 {
     public class TeacherRepository : ITeacherRepository
     {
-        private readonly TContext _context;
+        private readonly MyContext _context;
 
-        public TeacherRepository(TContext context)
+        public TeacherRepository(MyContext context)
         {
             _context = context;
         }

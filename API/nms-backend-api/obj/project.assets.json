@@ -4432,40 +4432,19 @@
     ]
   },
   "packageFolders": {
-<<<<<<< Updated upstream
-    "C:\\Users\\aelsavar\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\ugkee\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
->>>>>>> Stashed changes
+    "C:\\Users\\rsekhar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< Updated upstream
-      "projectUniqueName": "C:\\abiya1\\project\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj",
+      "projectUniqueName": "C:\\Users\\rsekhar\\Iprime_3\\WEB\\Project\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj",
       "projectName": "nms-backend-api",
-      "projectPath": "C:\\abiya1\\project\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj",
-      "packagesPath": "C:\\Users\\aelsavar\\.nuget\\packages\\",
-      "outputPath": "C:\\abiya1\\project\\Nexus-Management-System\\API\\nms-backend-api\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\ugkee\\OneDrive\\Documents\\Iprime_git\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj",
-      "projectName": "nms-backend-api",
-      "projectPath": "C:\\Users\\ugkee\\OneDrive\\Documents\\Iprime_git\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj",
-      "packagesPath": "C:\\Users\\ugkee\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ugkee\\OneDrive\\Documents\\Iprime_git\\Nexus-Management-System\\API\\nms-backend-api\\obj\\",
->>>>>>> Stashed changes
+      "projectPath": "C:\\Users\\rsekhar\\Iprime_3\\WEB\\Project\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj",
+      "packagesPath": "C:\\Users\\rsekhar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rsekhar\\Iprime_3\\WEB\\Project\\Nexus-Management-System\\API\\nms-backend-api\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-<<<<<<< Updated upstream
-        "C:\\Users\\aelsavar\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-        "C:\\Users\\ugkee\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
->>>>>>> Stashed changes
+        "C:\\Users\\rsekhar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4525,8 +4504,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\rsekhar\\Iprime_3\\WEB\\Project\\Nexus-Management-System\\API\\nms-backend-api\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

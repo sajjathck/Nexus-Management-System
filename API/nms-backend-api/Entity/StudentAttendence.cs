@@ -9,8 +9,9 @@ namespace nms_backend_api.Entity
     {
         [Key]
         public int StudAttendenceId { get; set; }
-
+        public int StudentId {  get; set; }
         [ForeignKey("StudentId")]
+        
         public Student? Student { get; set; }
 
         [Required]
