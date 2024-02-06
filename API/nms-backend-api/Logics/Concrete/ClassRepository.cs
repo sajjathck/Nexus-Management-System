@@ -6,9 +6,9 @@ namespace nms_backend_api.Logics.Concrete
 {
     public class ClassRepository : IClassRepository
     {
-        private readonly TContext _context;
+        private readonly MyContext _context;
         public List<Class1> classs = new List<Class1>();
-        public ClassRepository(TContext context)
+        public ClassRepository(MyContext context)
         {
             _context = context;
         }
@@ -54,13 +54,13 @@ namespace nms_backend_api.Logics.Concrete
             }
         }
 
-        public Class1 GetClassById(int id)
+        public Class1 GetClassBySemName(string name)
         {
             try
             {
                 foreach (var k in classs)
                 {
-                    if (k.ClassId == id)
+                    if (k.SemName == name)
                     {
                         return k;
                     }

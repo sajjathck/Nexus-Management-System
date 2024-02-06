@@ -28,12 +28,12 @@ namespace nms_backend_api.Controllers
                 throw;
             }
         }
-        [HttpGet, Route("GetClassById/{id}")]
-        public IActionResult getClassById(int id)
+        [HttpGet, Route("GetClassByClassName/{name}")]
+        public IActionResult getClassByName(string name)
         {
             try
             {
-                return Ok(classRepository.GetClassById(id));
+                return Ok(classRepository.GetClassBySemName(name));
             }
             catch (Exception)
             {

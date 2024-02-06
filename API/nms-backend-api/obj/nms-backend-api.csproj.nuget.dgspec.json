@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\project_Nms\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj": {}
+    "C:\\abiya1\\project\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj": {}
   },
   "projects": {
-    "C:\\project_Nms\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj": {
+    "C:\\abiya1\\project\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\project_Nms\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj",
+        "projectUniqueName": "C:\\abiya1\\project\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj",
         "projectName": "nms-backend-api",
-        "projectPath": "C:\\project_Nms\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj",
-        "packagesPath": "C:\\Users\\bkalaric\\.nuget\\packages\\",
-        "outputPath": "C:\\project_Nms\\Nexus-Management-System\\API\\nms-backend-api\\obj\\",
+        "projectPath": "C:\\abiya1\\project\\Nexus-Management-System\\API\\nms-backend-api\\nms-backend-api.csproj",
+        "packagesPath": "C:\\Users\\aelsavar\\.nuget\\packages\\",
+        "outputPath": "C:\\abiya1\\project\\Nexus-Management-System\\API\\nms-backend-api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\bkalaric\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\aelsavar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.1, )"

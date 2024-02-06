@@ -17,6 +17,7 @@ namespace nms_backend_api
             builder.Services.AddTransient<IStudentRepository, StudentRepository>();
             builder.Services.AddTransient<ITeacherRepository, TeacherRepository>();
             builder.Services.AddControllers();
+            builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
