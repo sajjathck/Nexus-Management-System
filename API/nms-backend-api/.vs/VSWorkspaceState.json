@@ -2,12 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\Controllers",
-    "\\Entity",
     "\\Logics",
     "\\Logics\\Concrete",
     "\\Logics\\Contract",
     "\\Migrations"
   ],
-  "SelectedNode": "\\Logics\\Concrete",
+  "SelectedNode": "\\nms-backend-api.sln",
   "PreviewInSolutionExplorer": false
 }

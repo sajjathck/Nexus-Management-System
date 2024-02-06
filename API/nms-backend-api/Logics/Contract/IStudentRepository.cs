@@ -4,11 +4,14 @@ namespace nms_backend_api.Logics.Contract
 {
     public interface IStudentRepository
     {
-        void Add(Student student);
+        void AddStudent(Student student);
+        List<Student> GetAllStudent();
+
+        Student GetStudentByName(string name);
+        Student GetStudentById(int studid);
+
         void Update(Student student);
         void Delete(int id);
-        Student GetStudentById(int id);
-        List<Student> GetAllStudent();
-        List<Student> GetStudentByClassId(int classid);
+       
     }
 }

@@ -14,7 +14,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("nms-backend-api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4ae4c92dad380e4f5c54fbc7cdb28af7d7b824cc")]
+<<<<<<< HEAD
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e1bc0113a5db50a5c4f0a47d6b374a43bdd6c40a")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+66fdf7034bfda8da91541e427e0d765a192df5ed")]
+>>>>>>> Student-branch
 [assembly: System.Reflection.AssemblyProductAttribute("nms-backend-api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("nms-backend-api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
