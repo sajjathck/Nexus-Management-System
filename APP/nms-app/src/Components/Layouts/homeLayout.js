@@ -15,22 +15,22 @@ export default function Layout() {
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav m-auto">
               <li className="nav-item">
-                <Link className="nav-link" to="/">
+                <Link className="nav-link .nav-link-hm" to="/">
                   Home
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/about">
+                <Link className="nav-link .nav-link-hm" to="/about">
                   About
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/courses">
+                <Link className="nav-link .nav-link-hm" to="/courses">
                   Courses
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/contact">
+                <Link className="nav-link .nav-link-hm" to="/contact">
                   Contact
                 </Link>
               </li>
