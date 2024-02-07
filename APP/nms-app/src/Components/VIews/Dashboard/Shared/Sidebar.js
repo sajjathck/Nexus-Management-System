@@ -16,7 +16,7 @@ export default function Sidebar() {
 
         <nav className="col-md-3 col-lg-2 d-md-block bg-light rounded-3 sidebar p-0 collapse">
           <div className="position-sticky pt-3">
-          <ul class="sidebarlist nav flex-column">
+          <ul className="sidebarlist nav flex-column">
               {modules.map((module) => (
                 <li className="nav-item border rounded-2 my-2 mx-2 " key={module.name}>
                   <Link to={module.link} className="nav-side-text nav-link ">

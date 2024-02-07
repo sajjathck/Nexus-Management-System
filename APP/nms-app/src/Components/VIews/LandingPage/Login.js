@@ -6,59 +6,54 @@ const validateInput = (value, label) => {
   if (value.trim() === "") {
     return `Please enter a ${label}.`;
   }
-  if (label === "Password" && value.length < 8) {
+  if (label === "Password" && value.length < 2) {
     return "Password must be at least 8 characters long.";
   }
   return null;
 };
 
 export default function Login(props) {
-  const [uname, setUname] = useState("");
-  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+  const [user, setUser] = useState({ UserName: "", Password: "" });
   const [unameError, setUnameError] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [err, setErr] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const navigate = useNavigate();
 
-  const handleLogin = async (e) => {
+
+  const handleLogin = (e) => {
     e.preventDefault();
     // btn fn
-    setUnameError(validateInput(uname, "Username"));
-    setPasswordError(validateInput(password, "Password"));
+    setUnameError(validateInput(user.UserName, "Username"));
+    setPasswordError(validateInput(user.Password, "Password"));
     // let logins=[{ uname, password }]
 
     if (!unameError && !passwordError) {
       setIsLoading(true);
-
-      try {
-        // Simulate API call
-        // const response = await new Promise((resolve) =>
-        //   setTimeout(() => resolve({ success: true }), 2000)
-        // );
-        const response = await axios.post(
-          "http://localhost:5225/api/User/Validate",
-          { uname, password }
-        );
-
-        if (response.success) {
-          // Store authentication token or handle login state
-          navigate("/dashboard");
-        } else {
-          // Handle failed login attempt (e.g., invalid credentials)
-          setUnameError("Invalid username or password.");
-          setPasswordError(null); // Clear password error on invalid credentials
-        }
-      } catch (error) {
-        console.error("Error during login:", error);
-        // Handle API error gracefully
-        setPasswordError("An error occurred. Please try again later.");
-      } finally {
-        setIsLoading(false);
-      }
-    }
-  };
-
+      axios
+        .post("http://localhost:5225/api/User/Validate", user)
+        .then((response) => {
+          console.log(response.data);
+          let validUser = response.data;
+          if (validUser != null) {
+            //set username in sessionstorage
+            sessionStorage.setItem("uid", validUser.userId);
+            sessionStorage.setItem("token", validUser.token);
+            if (validUser.role === "Admin") {
+              navigate("/dashboard/admin");
+            } else if (validUser.role === "Student") {
+              navigate("/dashboard/student");
+            } else if (validUser.role === "Teacher") {
+              navigate("/dashboard/teacher");
+            }
+          } else {
+            setErr("Invalid User Credentials");
+          }
+        })
+        .catch((err) => console.log(err));
+    };
+  }
   return (
     <section
       id="login-section"
@@ -89,17 +84,22 @@ export default function Login(props) {
                           <input
                             type="text"
                             id="username"
-                            value={uname}
-                            onChange={(e) => setUname(e.target.value)}
+                            value={user.UserName}
+                            onChange={(e) =>
+                              setUser((prevstate) => ({
+                                ...prevstate,
+                                UserName: e.target.value,
+                              }))
+                            }
                             className="form-control"
                             aria-describedby="usernameHelp"
                             aria-invalid={!!unameError}
                           />
-                          {unameError && (
+                          {/* {unameError && (
                             <small id="usernameHelp" className="text-danger">
                               {unameError}
                             </small>
-                          )}
+                          )} */}
                         </div>
                         <div className="mb-2">
                           <label htmlFor="password">Password</label>
@@ -107,13 +107,18 @@ export default function Login(props) {
                             <input
                               type={showPassword ? "text" : "password"}
                               id="password"
-                              value={password}
-                              onChange={(e) => setPassword(e.target.value)}
+                              value={user.Password}
+                            onChange={(e) =>
+                              setUser((prevstate) => ({
+                                ...prevstate,
+                                Password: e.target.value,
+                              }))
+                            }
                               className="form-control"
                               aria-describedby="passwordHelp"
                               aria-invalid={!!passwordError}
                             />
-                            {/* Some browsers Automatically have this option so i comment it\/ */}
+                            {/* Some browsers Automatically have this option so i commented it\/ */}
                             {/* <button
                               type="button"
                               className="input-group-text"
@@ -123,9 +128,9 @@ export default function Login(props) {
                               {showPassword ? "Hide" : "Show"}
                             </button> */}
                           </div>
-                          {passwordError && (
+                          {err && (
                             <small id="passwordHelp" className="text-danger">
-                              {passwordError}
+                              {err}
                             </small>
                           )}
                         </div>
@@ -154,9 +159,9 @@ export default function Login(props) {
                           </button>
                         </div>
                         <div className="mb-3 mt-1 d-flex justify-content-between">
-                        <Link to="/signup" className="text-decoration-none">
-                          <small>Don't have an account? Sign Up</small>
-                        </Link>
+                          <Link to="/signup" className="text-decoration-none">
+                            <small>Don't have an account? Sign Up</small>
+                          </Link>
                         </div>
                       </form>
                     </div>
@@ -169,4 +174,5 @@ export default function Login(props) {
       </div>
     </section>
   );
+
 }

@@ -133,7 +133,6 @@ export default function Signup(props) {
                             aria-invalid={!!roleError}
                           >
                             <option value="">Select Role</option>
-                            <option value="admin">Admin</option>
                             <option value="teacher">Teacher</option>
                             <option value="student">Student</option>
                           </select>

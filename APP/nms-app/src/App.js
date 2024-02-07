@@ -19,6 +19,10 @@ import CommunicationPage from "./Components/VIews/Dashboard/StudentComponents/Co
 import StudentPage from "./Components/VIews/Dashboard/StudentPage";
 import TeacherPage from "./Components/VIews/Dashboard/TeacherPage";
 import Signup from "./Components/VIews/Signup";
+import AdminPage from "./Components/VIews/Dashboard/AdminPage";
+import TeacherAttendancePage from "./Components/VIews/Dashboard/AdminComponents/TeacherAttendancePage";
+import StudentModule from "./Components/VIews/Dashboard/AdminComponents/StudentModule";
+import TeacherModule from "./Components/VIews/Dashboard/AdminComponents/TeacherModule";
 
 function App() {
   return (
@@ -46,6 +50,14 @@ function App() {
               <Route path="profile" element={<ProfilePage />} />
               <Route path="attendance" element={<AttendancePage />} />
               <Route path="examination" element={<ExaminationPage />} />
+              <Route path="class" element={<ClassPage />} />
+              <Route path="communication" element={<CommunicationPage />} />
+            </Route>
+            <Route path="admin" element={<AdminPage />}>
+              <Route path="profile" element={<ProfilePage />} />
+              <Route path="student" element={<StudentModule />} />
+              <Route path="teacher" element={<TeacherModule />} />
+              <Route path="attendance" element={<TeacherAttendancePage/>} />
               <Route path="class" element={<ClassPage />} />
               <Route path="communication" element={<CommunicationPage />} />
             </Route>
