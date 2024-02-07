@@ -18,6 +18,11 @@ import ClassPage from "./Components/VIews/Dashboard/StudentComponents/ClassPage"
 import CommunicationPage from "./Components/VIews/Dashboard/StudentComponents/CommunicationPage";
 import StudentPage from "./Components/VIews/Dashboard/StudentPage";
 import TeacherPage from "./Components/VIews/Dashboard/TeacherPage";
+import AdminPage from "./Components/VIews/Dashboard/AdminPage";
+import GetAllStudent from "./Components/VIews/Dashboard/AdminComponents/GetAllStudent";
+import AddStudent from "./Components/VIews/Dashboard/AdminComponents/AddStudent";
+import GetStudentById from "./Components/VIews/Dashboard/AdminComponents/GetStudentById";
+import GetStudentByClass from "./Components/VIews/Dashboard/AdminComponents/GetStudentByClass";
 
 function App() {
   return (
@@ -46,6 +51,12 @@ function App() {
               <Route path="examination" element={<ExaminationPage />} />
               <Route path="class" element={<ClassPage />} />
               <Route path="communication" element={<CommunicationPage />} />
+            </Route>
+            <Route path="admin" element={<AdminPage />}>
+              <Route path="get-all-student" element={<GetAllStudent/>} />
+              <Route path="add-student" element={<AddStudent/>} />
+              <Route path="get-student-by-id" element={<GetStudentById/>} />
+              <Route path="get-student-by-class" element={<GetStudentByClass/>} />
             </Route>
           </Route>
           <Route path="*" element={<Nopage />} />
