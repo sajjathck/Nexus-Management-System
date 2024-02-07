@@ -23,6 +23,11 @@ import GetAllStudent from "./Components/VIews/Dashboard/AdminComponents/GetAllSt
 import AddStudent from "./Components/VIews/Dashboard/AdminComponents/AddStudent";
 import GetStudentById from "./Components/VIews/Dashboard/AdminComponents/GetStudentById";
 import GetStudentByClass from "./Components/VIews/Dashboard/AdminComponents/GetStudentByClass";
+import GetAllSchedClass from "./Components/VIews/Dashboard/AdminComponents/GetAllSchedClass";
+import AddSchedClass from "./Components/VIews/Dashboard/AdminComponents/AddSchedClass";
+import GetClassByClassID from "./Components/VIews/Dashboard/AdminComponents/GetClassByClassID";
+import GetClassByTeacherID from "./Components/VIews/Dashboard/AdminComponents/GetClassByTeacherID";
+
 
 function App() {
   return (
@@ -53,6 +58,10 @@ function App() {
               <Route path="communication" element={<CommunicationPage />} />
             </Route>
             <Route path="admin" element={<AdminPage />}>
+            <Route path="get-all-sched-class" element={<GetAllSchedClass/>} />
+            <Route path="add-schedule-class" element={<AddSchedClass/>} />
+            <Route path="get-class-by-classid" element={<GetClassByClassID/>} />
+            <Route path="get-class-by-teacherid" element={<GetClassByTeacherID/>} />
               <Route path="get-all-student" element={<GetAllStudent/>} />
               <Route path="add-student" element={<AddStudent/>} />
               <Route path="get-student-by-id" element={<GetStudentById/>} />
