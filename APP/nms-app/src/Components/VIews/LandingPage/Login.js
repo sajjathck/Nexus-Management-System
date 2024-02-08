@@ -17,7 +17,7 @@ export default function Login(props) {
   const [user, setUser] = useState({ UserName: "", Password: "" });
   const [unameError, setUnameError] = useState("");
   const [passwordError, setPasswordError] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
+  // const [showPassword, setShowPassword] = useState(false);
   const [err, setErr] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
@@ -37,18 +37,27 @@ export default function Login(props) {
           console.log(response.data);
           let validUser = response.data;
           if (validUser != null) {
+            console.log(response.data);
             //set username in sessionstorage
-            sessionStorage.setItem("uid", validUser.userId);
+            if (validUser.role === null || validUser.token === null || validUser.userId ===  0) {
+              setErr("Invalid user credentials or missing user details.");
+              setIsLoading(false);
+            } else {
+              sessionStorage.setItem("uid", validUser.userId);
             sessionStorage.setItem("token", validUser.token);
-            if (validUser.role === "Admin") {
+            sessionStorage.setItem("role", validUser.role);
+            if (validUser.role === "admin") {
               navigate("/dashboard/admin");
-            } else if (validUser.role === "Student") {
+            } else if (validUser.role === "student") {
               navigate("/dashboard/student");
-            } else if (validUser.role === "Teacher") {
+            } else if (validUser.role === "teacher") {
               navigate("/dashboard/teacher");
             }
+            }
+            
           } else {
             setErr("Invalid User Credentials");
+            setIsLoading(false);
           }
         })
         .catch((err) => console.log(err));
@@ -105,7 +114,8 @@ export default function Login(props) {
                           <label htmlFor="password">Password</label>
                           <div className="input-group">
                             <input
-                              type={showPassword ? "text" : "password"}
+                              // type={showPassword ? "text" : "password"}
+                              type="password"
                               id="password"
                               value={user.Password}
                             onChange={(e) =>
@@ -149,7 +159,7 @@ export default function Login(props) {
                             Forgot <a href="#">Password?</a>
                           </p>
                         </div>
-                        <div className="d-grid">
+                        <div className="d-grid mt-2">
                           <button
                             type="submit"
                             className="btn btn-login"

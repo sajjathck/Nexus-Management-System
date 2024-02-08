@@ -5,7 +5,6 @@ import Sidebar from "../VIews/Dashboard/Shared/Sidebar";
 
 export default function DashboardLayout() {
   const [role, setRole] = useState(""); // Initialize role state
-
   useEffect(() => {
     const roleFromSessionStorage = sessionStorage.getItem("Role");
     if (roleFromSessionStorage) {

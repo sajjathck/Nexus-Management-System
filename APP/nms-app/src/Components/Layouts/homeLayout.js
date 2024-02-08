@@ -8,7 +8,7 @@ export default function Layout() {
   return (
     <div className="">
       <nav className="navbar navbar-expand-lg navbar-light">
-        <div className="container">
+        <div className="container mx-auto px-0">
           
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
           <Link className="navbar-brand" to="/">
@@ -37,10 +37,16 @@ export default function Layout() {
               </li>
             </ul>
             {!isLoginPage && ( // Conditionally render the login button
-              <Link className="nav-item" to="/login">
+              <Link className="nav-item me-3" to="/login">
                 <Button text="Login" />
               </Link>
             )}
+            {!isLoginPage && ( // Conditionally render the login button
+              <Link className="nav-item ms-3" to="/signup">
+                <Button text="Signup" />
+              </Link>
+            )}
+            
           </div>
         </div>
       </nav>

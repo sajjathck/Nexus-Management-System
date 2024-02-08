@@ -1,14 +1,6 @@
-import React, { useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import React from "react";
 import Card from "./Shared/Card";
-
-const modules = [
-  { name: "Profile", link: "profile" },
-  { name: "Attendance", link: "attendance" },
-  { name: "Examination", link: "examination" },
-  { name: "Class", link: "class" },
-  { name: "Communication", link: "communication" },
-];
+import modules from "./TeacherComponents/TeacherModules";
 
 export default function TeacherPage() {
   return (

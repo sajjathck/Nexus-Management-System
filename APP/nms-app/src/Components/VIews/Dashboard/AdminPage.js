@@ -1,15 +1,6 @@
-import React, { useState } from 'react';
-import { Link, Outlet } from "react-router-dom";
+import React from 'react';
 import Card from './Shared/Card';
-
-const modules = [
-  { name: 'Profile', link: 'profile' },
-  { name: 'Student Management', link: 'student' },
-  { name: 'Teacher Management', link: 'teacher' },
-  { name: 'Attendance', link: 'attendance' },
-  { name: 'Class', link: 'class' },
-  { name: 'Communication', link: 'communication' },
-];
+import modules from './AdminComponents/adminModules';
 
 export default function AdminPage() {
   return (
