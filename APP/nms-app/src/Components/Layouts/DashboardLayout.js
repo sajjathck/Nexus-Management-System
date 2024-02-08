@@ -20,10 +20,11 @@ export default function DashboardLayout() {
             NeXus.
           </Link>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul className="navbar-nav m-auto"></ul>
+            <ul className="navbar-nav ms-auto">
             <Link className="nav-item" to="/login">
               <Button text="Logout" />
             </Link>
+            </ul>
           </div>
         </div>
       </nav>

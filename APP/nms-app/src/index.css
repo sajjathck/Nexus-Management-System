@@ -31,12 +31,17 @@ body, html, .App, #root, .auth-wrapper {
   padding-bottom: 0px;
 }
 .nav-link-hm {
-  padding:18px 0 0 0 !important;
+  /* padding:18px 0 0 0 !important; */
   min-width:120px !important;
-  font-size:small !important;
+  font-size:medium !important;
   font-weight: 700 !important;
   text-align: center;
 }
+.nav-link-hover:hover {
+  text-decoration: none;
+  border-bottom:  2px solid #2d75f1;
+}
+
 .nav-side-text {
   font-weight: 700 !important;
   color: #23232b !important;

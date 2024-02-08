@@ -5,6 +5,7 @@ import Button from "../Button";
 export default function Layout() {
   const location = useLocation();
   const isLoginPage = location.pathname === "/login";
+  const isSignupPage = location.pathname === "/signup";
   return (
     <div className="">
       <nav className="navbar navbar-expand-lg navbar-light">
@@ -16,37 +17,38 @@ export default function Layout() {
           </Link>
             <ul className="navbar-nav m-auto">
               <li className="nav-item">
-                <Link className="nav-link .nav-link-hm" to="/">
-                  Home
+                <Link className="nav-link  nav-link-hm " to="/">
+                  <small className="nav-link-hover">Home</small>
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link .nav-link-hm" to="/about">
-                  About
+                <Link className="nav-link  nav-link-hm " to="/about">
+                <small className="nav-link-hover">About</small>
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link .nav-link-hm" to="/courses">
-                  Courses
+                <Link className="nav-link  nav-link-hm " to="/courses">
+                <small className="nav-link-hover">Courses</small>
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link .nav-link-hm" to="/contact">
-                  Contact
+                <Link className="nav-link  nav-link-hm" to="/contact">
+                <small className="nav-link-hover">Contact</small>
                 </Link>
               </li>
             </ul>
+            <div className="btn-group col-md-1">
             {!isLoginPage && ( // Conditionally render the login button
-              <Link className="nav-item me-3" to="/login">
+              <Link className="nav-item me-3 " to="/login">
                 <Button text="Login" />
               </Link>
             )}
-            {!isLoginPage && ( // Conditionally render the login button
-              <Link className="nav-item ms-3" to="/signup">
+            {!isSignupPage && ( // Conditionally render the login button
+              <Link className="nav-item mx-auto" to="/signup">
                 <Button text="Signup" />
               </Link>
             )}
-            
+            </div>
           </div>
         </div>
       </nav>

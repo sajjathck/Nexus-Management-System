@@ -70,3 +70,11 @@ function App() {
 }
 
 export default App;
+
+{/* <Route path="student" element={<StudentLayout />}>
+  <Route path="profile" element={<ProfilePage />} />
+  <Route path="attendance" element={<AttendancePage />} />
+  <Route path="examination" element={<ExaminationPage />} />
+  <Route path="class" element={<ClassPage />} />
+  <Route path="communication" element={<CommunicationPage />} />
+</Route> */}

@@ -39,22 +39,22 @@ export default function Login(props) {
           if (validUser != null) {
             console.log(response.data);
             //set username in sessionstorage
-            if (validUser.role === null || validUser.token === null || validUser.userId ===  0) {
+            if (validUser.role === null || validUser.token === null || validUser.userId === 0) {
               setErr("Invalid user credentials or missing user details.");
               setIsLoading(false);
             } else {
               sessionStorage.setItem("uid", validUser.userId);
-            sessionStorage.setItem("token", validUser.token);
-            sessionStorage.setItem("role", validUser.role);
-            if (validUser.role === "admin") {
-              navigate("/dashboard/admin");
-            } else if (validUser.role === "student") {
-              navigate("/dashboard/student");
-            } else if (validUser.role === "teacher") {
-              navigate("/dashboard/teacher");
+              sessionStorage.setItem("token", validUser.token);
+              sessionStorage.setItem("role", validUser.role);
+              if (validUser.role === "admin") {
+                navigate("/dashboard/admin");
+              } else if (validUser.role === "student") {
+                navigate("/dashboard/student");
+              } else if (validUser.role === "teacher") {
+                navigate("/dashboard/teacher");
+              }
             }
-            }
-            
+
           } else {
             setErr("Invalid User Credentials");
             setIsLoading(false);
@@ -68,25 +68,25 @@ export default function Login(props) {
       id="login-section"
       className="bg-light rounded-2 p-3 p-md-4 p-xl-5 min-vh-80 d-flex flex-row align-items-center"
     >
-      <div className="container">
+      <div className="container-fluid">
         <div className="row justify-content-center">
-          <div className="card rounded shadow p-0 mb-3">
-            <div className="row  g-0">
-              <div className="col-md-8">
+          <div className="col-md-4 card rounded shadow p-0 mb-3">
+            <div className="row g-0 ">
+              {/* <div className="col-md-8">
                 <img
                   src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   className="card-img img-fluid"
                   alt="..."
                 />
-              </div>
-              <div className="col-md-4">
+              </div> */}
+              <div className="col-md-12">
                 <div className="card-body">
                   <div className="card-body p-3 p-md-4 p-xl-5">
                     <div className="row">
                       <form onSubmit={handleLogin}>
-                        <h6 className="text-center mb-4 mt-0">
-                          Hey,Welcome Back.!
-                        </h6>
+                        <h5 className="text-left mb-4 mt-0">
+                          Hey,<span className="text-primary">Welcome Back.!</span>
+                        </h5>
                         <h3>Sign In</h3>
                         <div className="mb-3">
                           <label htmlFor="username">Username</label>
@@ -118,12 +118,12 @@ export default function Login(props) {
                               type="password"
                               id="password"
                               value={user.Password}
-                            onChange={(e) =>
-                              setUser((prevstate) => ({
-                                ...prevstate,
-                                Password: e.target.value,
-                              }))
-                            }
+                              onChange={(e) =>
+                                setUser((prevstate) => ({
+                                  ...prevstate,
+                                  Password: e.target.value,
+                                }))
+                              }
                               className="form-control"
                               aria-describedby="passwordHelp"
                               aria-invalid={!!passwordError}

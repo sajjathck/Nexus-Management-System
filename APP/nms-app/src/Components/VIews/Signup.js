@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const validateInput = (value, label) => {
-  if (value.trim() === "") {
+  if (value === "") {
     return `Please enter a ${label}.`;
   }
   if (label === "Password" && value.length < 8) {
@@ -18,61 +20,84 @@ const validateInput = (value, label) => {
     return "Please enter a valid email address.";
   }
 
-  if (label === "AdmissionId" && value.trim() === "") {
-    return "Please enter an Admission ID.";
-  }
+  // if (label === "AdmissionId" && value.trim() === "") {
+  //   return "Please enter an Admission ID.";
+  // }
   return null;
 };
 
 export default function Signup(props) {
+  React.useEffect(() => {
+   
+  }, []);
   const [userDetails, setUserDetails] = useState({
-    Email: "",
-    PhoneNumber: "",
-    AdmissionID: "",
-    Role: "",
+    UserId: "",
     UserName: "",
     Password: "",
+    Role: "",
+    PhoneNum: "",
+    EmailId: "",
+    AdmissionID: "",
+
   });
   //errors
+  const [userIdError, setUserIdError] = useState("");
   const [unameError, setUnameError] = useState("");
   const [passwordError, setPasswordError] = useState("");
+  const [confirmPasswordError, setConfirmPasswordError] = useState("");
   const [roleError, setRoleError] = useState("");
   const [phoneNumError, setPhoneNumberError] = useState("");
   const [emailIdError, setEmailError] = useState("");
   const [admissionIdError, setAdmissionIdError] = useState("");
   const [err, setErr] = useState("");
   //util
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
   const handleChange = (e) => {
+
     setUserDetails({ ...userDetails, [e.target.id]: e.target.value });
-  };
+    if (e.target.id === "confirmPassword") {
+      setConfirmPassword(e.target.value);
+    }
+  }
 
   const handleSignup = async (e) => {
     e.preventDefault();
-    setEmailError(validateInput(userDetails.Email, "Email"));
-    setPhoneNumberError(validateInput(userDetails.PhoneNumber, "Phone Number"));
+    setEmailError(validateInput(userDetails.Emailid, "Email"));
+    setPhoneNumberError(validateInput(userDetails.PhoneNum, "Phone Number"));
     setAdmissionIdError(validateInput(userDetails.AdmissionID, "Admission ID"));
     setRoleError(validateInput(userDetails.Role, "Role"));
     setUnameError(validateInput(userDetails.UserName, "Username"));
     setPasswordError(validateInput(userDetails.Password, "Password"));
-    
+    setUserIdError(validateInput(userDetails.UserId, "UserId"));
 
+    if (userDetails.Password !== confirmPassword) {
+      setConfirmPasswordError("Passwords do not match.");
+    } else {
+      setConfirmPasswordError("");
+    }
+    
     if (
       !unameError &&
       !passwordError &&
       !roleError &&
       !phoneNumError &&
       !emailIdError &&
+      !userIdError &&
       !admissionIdError
     ) {
       setIsLoading(true);
       axios
         .post("http://localhost:5225/api/User/Register", userDetails)
         .then((response) => {
-          // Handle successful registration
-          navigate("/login"); // Redirect to login page after successful registration
+          console.log(response);
+          toast('User registered successfully!');
+         
+          setTimeout(() => {
+            navigate("/login"); // Redirect to login page after successful registration
+          },  3000); 
         })
         .catch((error) => {
           // Handle error during registration
@@ -87,11 +112,12 @@ export default function Signup(props) {
       id="signup-section"
       className="bg-light rounded-2 p-3 p-md-4 p-xl-5 min-vh-80 d-flex flex-row align-items-center"
     >
-    
+
       <div className="container-fluid">
         <div className="row justify-content-center">
           <div className="col-md-8 card rounded shadow p-0 mb-3">
             <div className="row g-0">
+     
               {/* <div className="col-md-5">
                 <img
                   src="https://images.unsplash.com/photo-1525011268546-bf3f9b007f6a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -105,6 +131,7 @@ export default function Signup(props) {
                     <form onSubmit={handleSignup}>
                       <div className="row ">
                         <h6 className="fs-3 mb-4 mt-0">
+                        <ToastContainer />
                           Welcome!{" "}
                           <span className="text-primary">Sign up now.</span>
                         </h6>
@@ -113,7 +140,7 @@ export default function Signup(props) {
                             <label htmlFor="username">Username</label>
                             <input
                               type="text"
-                              id="username"
+                              id="UserName"
                               value={userDetails.UserName}
                               onChange={handleChange}
                               className="form-control"
@@ -131,7 +158,7 @@ export default function Signup(props) {
                             <div className="input-group">
                               <input
                                 type={showPassword ? "text" : "password"}
-                                id="password"
+                                id="Password"
                                 value={userDetails.Password}
                                 onChange={handleChange}
                                 className="form-control"
@@ -154,18 +181,35 @@ export default function Signup(props) {
                             )}
                           </div>
                           <div className="mb-3">
-                            <label htmlFor="role">Role</label>
-                            <select
-                              id="role"
-                              value={userDetails.Role}
+                            <label htmlFor="confirmPassword">Confirm Password</label>
+                            <input
+                              type="password"
+                              id="confirmPassword"
+                              value={confirmPassword}
                               onChange={handleChange}
                               className="form-control"
+                              aria-describedby="confirmPasswordHelp"
+                              aria-invalid={!!confirmPasswordError}
+                            />
+                            {confirmPasswordError && (
+                              <small id="confirmPasswordHelp" className="text-danger">
+                                {confirmPasswordError}
+                              </small>
+                            )}
+                          </div>
+                          <div className="mb-3">
+                            <label htmlFor="role">Role</label>
+                            <select
+                              id="Role"
+                              value={userDetails.Role}
+                              onChange={handleChange}
+                              className="form-control bg-light"
                               aria-describedby="roleHelp"
                               aria-invalid={!!roleError}
                             >
                               <option value="">Select Role</option>
-                              <option value="Teacher">Teacher</option>
-                              <option value="Student">Student</option>
+                              <option value="teacher">Teacher</option>
+                              <option value="student">Student</option>
                             </select>
                             {roleError && (
                               <small id="roleHelp" className="text-danger">
@@ -180,8 +224,8 @@ export default function Signup(props) {
                             <label htmlFor="tel">Mobile No</label>
                             <input
                               type="tel"
-                              id="phoneNum"
-                              value={userDetails.PhoneNumber}
+                              id="PhoneNum"
+                              value={userDetails.PhoneNum}
                               onChange={handleChange}
                               className="form-control"
                               aria-describedby="phoneNumHelp"
@@ -197,8 +241,8 @@ export default function Signup(props) {
                             <label htmlFor="email">Email</label>
                             <input
                               type="email"
-                              id="emailId"
-                              value={userDetails.Email}
+                              id="EmailId"
+                              value={userDetails.Emailid}
                               onChange={handleChange}
                               className="form-control"
                               aria-describedby="emailIdHelp"
@@ -211,22 +255,41 @@ export default function Signup(props) {
                             )}
                           </div>
                           <div className="mb-3">
-                            <label htmlFor=""> {userDetails.Role} ID</label>
+                            <div>
+                              <label htmlFor="AdmissionID"> {userDetails.Role} ID</label>
+                              <input
+                                type="text"
+                                id="AdmissionID"
+                                value={userDetails.AdmissionID}
+                                onChange={handleChange}
+                                className="form-control"
+                                aria-describedby="admissionIdHelp"
+                                aria-invalid={!!admissionIdError}
+                              />
+                              {admissionIdError && (
+                                <small
+                                  id="admissionIdHelp"
+                                  className="text-danger"
+                                >
+                                  {admissionIdError}
+                                </small>
+                              )}
+                            </div>
+                          </div>
+                          <div className="mb-3">
+                            <label htmlFor="UserId">User ID</label>
                             <input
-                              type="number"
-                              id="admissionId"
-                              value={userDetails.AdmissionID}
+                              type="text"
+                              id="UserId"
+                              value={userDetails.UserId}
                               onChange={handleChange}
                               className="form-control"
-                              aria-describedby="admissionIdHelp"
-                              aria-invalid={!!admissionIdError}
+                              aria-describedby="userIdHelp"
+                              aria-invalid={!!userIdError}
                             />
-                            {admissionIdError && (
-                              <small
-                                id="admissionIdHelp"
-                                className="text-danger"
-                              >
-                                {admissionIdError}
+                            {userIdError && (
+                              <small id="userIdHelp" className="text-danger">
+                                {userIdError}
                               </small>
                             )}
                           </div>
@@ -240,13 +303,13 @@ export default function Signup(props) {
                             {isLoading ? "Signing up..." : "Submit"}
                           </button>
                           {err && (
-                              <small
-                                id="ButtonHelp"
-                                className="text-danger"
-                              >
-                                {err}
-                              </small>
-                            )}
+                            <small
+                              id="ButtonHelp"
+                              className="text-danger"
+                            >
+                              {err}
+                            </small>
+                          )}
                         </div>
                         <div className="mb-3 mt-2 d-flex justify-content-between">
                           <Link to="/login" className="text-decoration-none">
