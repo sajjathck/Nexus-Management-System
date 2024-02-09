@@ -11,14 +11,7 @@ export default function StudentPage() {
           <div className="row justify-content-between align-items-center g-2">
             <div className="col">
               <div className="row row-cols-3 mb-5 mx-auto">
-              {modules.map((module) => (
-                  <Link key={module.name} to={`/${module.link}`}>
-                    <Card
-                      link={module.link}
-                      name={module.name}
-                    />
-                  </Link>
-                ))}
+             
             </div>
           </div>
         </div>

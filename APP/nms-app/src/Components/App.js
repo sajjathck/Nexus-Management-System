@@ -16,15 +16,14 @@ import ProfilePage from "./components/views/dashboard/studentComponents/ProfileP
 import AttendancePage from "./components/views/dashboard/studentComponents/AttendancePage";
 import ExaminationPage from "./components/views/dashboard/studentComponents/ExaminationPage";
 import ClassPage from "./components/views/dashboard/studentComponents/ClassPage";
-import CommunicationPage from "./Components/VIews/Dashboard/AdminComponents/CommunicationPage"
-import StudentPage from "./Components/VIews/Dashboard/StudentPage";
-import TeacherPage from "./Components/VIews/Dashboard/TeacherPage";
+import CommunicationPage from "./components/views/dashboard/studentComponents/CommunicationPage";
+import StudentPage from "./components/views/dashboard/StudentPage";
+import TeacherPage from "./components/views/dashboard/TeacherPage";
 import Signup from "./components/views/Signup";
-import AdminPage from "./Components/VIews/Dashboard/AdminPage";
+import AdminPage from "./components/views/dashboard/AdminPage";
 import TeacherAttendancePage from "./components/views/dashboard/adminComponents/TeacherAttendancePage";
-import TeacherManager from "./Components/VIews/Dashboard/AdminComponents/TeacherManager";
-import StudentManager from "./Components/VIews/Dashboard/AdminComponents/StudentManager";
-import StudentAttendancePage from "./Components/VIews/Dashboard/TeacherComponents/StudentAttendancePage";
+import StudentModule from "./components/views/dashboard/adminComponents/StudentModule";
+import TeacherModule from "./components/views/dashboard/adminComponents/TeacherModule";
 
 
 function App() {
@@ -49,19 +48,19 @@ function App() {
               <Route path="attendance" element={<AttendancePage />} />
               <Route path="examination" element={<ExaminationPage />} />
               <Route path="class" element={<ClassPage />} />
-              {/* <Route path="communication" element={<CommunicationPage />} /> */}
+              <Route path="communication" element={<CommunicationPage />} />
             </Route>
             <Route path="teacher" element={<TeacherPage />}>
               <Route path="profile" element={<ProfilePage />} />
-              <Route path="attendance" element={<StudentAttendancePage />} />
+              <Route path="attendance" element={<AttendancePage />} />
               <Route path="examination" element={<ExaminationPage />} />
               <Route path="class" element={<ClassPage />} />
-              {/* <Route path="communication" element={<CommunicationPage />} /> */}
+              <Route path="communication" element={<CommunicationPage />} />
             </Route>
             <Route path="admin" element={<AdminPage />}>
               <Route path="profile" element={<ProfilePage />} />
-              <Route path="student" element={<StudentManager />} />
-              <Route path="teacher" element={<TeacherManager />} />
+              <Route path="student" element={<StudentModule />} />
+              <Route path="teacher" element={<TeacherModule />} />
               <Route path="attendance" element={<TeacherAttendancePage />} />
               <Route path="class" element={<ClassPage />} />
               <Route path="communication" element={<CommunicationPage />} />

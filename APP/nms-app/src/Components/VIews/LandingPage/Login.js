@@ -21,7 +21,6 @@ export default function Login(props) {
   const [err, setErr] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-
   const handleLogin = (e) => {
     e.preventDefault();
     // btn fn
@@ -39,7 +38,11 @@ export default function Login(props) {
           if (validUser != null) {
             console.log(response.data);
             //set username in sessionstorage
-            if (validUser.role === null || validUser.token === null || validUser.userId === 0) {
+            if (
+              validUser.role === null ||
+              validUser.token === null ||
+              validUser.userId === 0
+            ) {
               setErr("Invalid user credentials or missing user details.");
               setIsLoading(false);
             } else {
@@ -54,15 +57,14 @@ export default function Login(props) {
                 navigate("/dashboard/teacher");
               }
             }
-
           } else {
             setErr("Invalid User Credentials");
             setIsLoading(false);
           }
         })
         .catch((err) => console.log(err));
-    };
-  }
+    }
+  };
   return (
     <section
       id="login-section"
@@ -85,7 +87,8 @@ export default function Login(props) {
                     <div className="row">
                       <form onSubmit={handleLogin}>
                         <h5 className="text-left mb-4 mt-0">
-                          Hey,<span className="text-primary">Welcome Back.!</span>
+                          Hey,
+                          <span className="text-primary">Welcome Back.!</span>
                         </h5>
                         <h3>Sign In</h3>
                         <div className="mb-3">
@@ -156,7 +159,13 @@ export default function Login(props) {
             </label>
           </div> */}
                           <p className="forgot-password text-right p-0 text-decoration-none">
-                            Forgot <a href="#">Password?</a>
+                            Forgot{" "}
+                            <a
+                              href="#"
+                              onClick={() => navigate("/forgot-password")}
+                            >
+                              Password?
+                            </a>
                           </p>
                         </div>
                         <div className="d-grid mt-2">
@@ -184,5 +193,4 @@ export default function Login(props) {
       </div>
     </section>
   );
-
 }
