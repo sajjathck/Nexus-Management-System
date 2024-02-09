@@ -2,7 +2,8 @@ import React from "react";
 import { Link, Outlet, useLocation } from "react-router-dom";
 import Button from "../Button";
 
-export default function Layout() {
+
+export default function HomeLayout() {
   const location = useLocation();
   const isLoginPage = location.pathname === "/login";
   const isSignupPage = location.pathname === "/signup";

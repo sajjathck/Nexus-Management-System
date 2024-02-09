@@ -70,6 +70,7 @@ export default function Signup(props) {
   }, [userDetails.Role]);
 
   //errors
+  /* eslint-disable no-unused-vars */
   const [userIdError, setUserIdError] = useState("");
   const [unameError, setUnameError] = useState("");
   const [passwordError, setPasswordError] = useState("");
@@ -79,6 +80,7 @@ export default function Signup(props) {
   const [emailIdError, setEmailError] = useState("");
   const [admissionIdError, setAdmissionIdError] = useState("");
   const [err, setErr] = useState("");
+  /* eslint-enable no-unused-vars */
   //util
   const [admissionIds, setAdmissionIds] = useState([]);
   const [filteredAdmissionIds, setFilteredAdmissionIds] = useState([]);

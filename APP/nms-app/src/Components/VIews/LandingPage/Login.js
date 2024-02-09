@@ -36,7 +36,7 @@ export default function Login(props) {
           console.log(response.data);
           let validUser = response.data;
           if (validUser != null) {
-            console.log(response.data);
+           
             //set username in sessionstorage
             if (
               validUser.role === null ||
@@ -48,14 +48,16 @@ export default function Login(props) {
             } else {
               sessionStorage.setItem("uid", validUser.userId);
               sessionStorage.setItem("token", validUser.token);
-              sessionStorage.setItem("role", validUser.role);
-              if (validUser.role === "admin") {
+              sessionStorage.setItem("role", validUser.role.toLowerCase());
+              setTimeout(() => {
+              if (validUser.role.toLowerCase() === "admin") {
                 navigate("/dashboard/admin");
-              } else if (validUser.role === "student") {
+              } else if (validUser.role.toLowerCase() === "student") {
                 navigate("/dashboard/student");
-              } else if (validUser.role === "teacher") {
+              } else if (validUser.role.toLowerCase() === "teacher") {
                 navigate("/dashboard/teacher");
               }
+            },  1000);
             }
           } else {
             setErr("Invalid User Credentials");

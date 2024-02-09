@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function ClassPage() {
+export default function AdminClassPage() {
   return (
     <div>ClassPage</div>
   )

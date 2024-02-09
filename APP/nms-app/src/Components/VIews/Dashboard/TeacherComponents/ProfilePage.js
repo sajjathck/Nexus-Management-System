@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function ProfilePage() {
+export default function TeacherProfilePage() {
   return (
     <div>ProfilePage</div>
   )

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function CommunicationPage() {
+export default function ViewCommunicationPage() {
   return (
     <div>CommunicationPage</div>
   )

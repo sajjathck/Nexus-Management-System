@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function TeacherManager() {
+export default function AdminTeacherManager() {
   return (
     <div>TeacherModule</div>
   )

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function StudentAttendancePage() {
+export default function AddStudentAttendancePage() {
   return (
     <div>AttendancePage</div>
   )
